@@ -1,0 +1,39 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: left;
+  padding: 1rem;
+}
+
+.title {
+  margin-top: 20px;
+  margin-bottom: 0;
+  font-size: 2rem;
+}
+
+.error {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  color: rgb(221, 50, 50);
+}
+
+@media (max-width: 320px) {
+  .container {
+    padding: 8px;
+  }
+
+  .title {
+    font-size: 24px;
+  }
+}
+
+@media (min-width: 1025px) {
+  .container {
+    padding: 32px;
+  }
+
+  .title {
+    font-size: 40px;
+  }
+}

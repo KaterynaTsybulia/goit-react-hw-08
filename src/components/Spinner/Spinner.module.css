@@ -1,0 +1,18 @@
+.loader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgb(198, 244, 251);
+  background: linear-gradient(
+    0deg,
+    rgba(198, 244, 251, 0.8239963221616772) 0%,
+    rgba(165, 239, 243, 0.6419234930300245) 21%,
+    rgba(184, 228, 241, 0.4234360980720413) 57%
+  );
+  z-index: 9999;
+}

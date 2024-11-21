@@ -1,0 +1,13 @@
+.label {
+  min-width: 300px;
+  max-width: max-content;
+  margin: 15px 0;
+}
+
+.input {
+  display: block;
+  min-width: 100%;
+  border: 2px solid #424242;
+  border-radius: 4px;
+  min-width: 300px;
+}
