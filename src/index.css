@@ -1,13 +1,21 @@
 body {
   font-family: sans-serif;
   line-height: 1.5;
-  background: rgb(232, 249, 217);
-  background: linear-gradient(
-    270deg,
-    rgba(232, 249, 217, 1) 0%,
-    rgba(255, 255, 205, 1) 51%,
-    rgba(232, 249, 217, 1) 100%
-  );
+  background-image: url("/src//img/background.jpg");
+  background-color: rgba(255, 255, 255, 0.5);
+  background-size: cover;
+  background-position: center center;
+  height: 100vh;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Прозрачный черный слой */
+  z-index: -1; /* Слой фона будет на заднем плане */
 }
 
 h1,

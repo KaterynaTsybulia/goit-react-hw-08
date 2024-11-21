@@ -29,7 +29,9 @@ export default function ContactForm() {
     >
       <Form className={css.contactForm}>
         <div className={css.divContact}>
-          <label htmlFor={nameFieldId}>Name</label>
+          <label htmlFor={nameFieldId} className={css.label}>
+            Name
+          </label>
           <Field
             type="text"
             name="name"
@@ -44,7 +46,9 @@ export default function ContactForm() {
           />
         </div>
         <div className={css.divContact}>
-          <label htmlFor={numberFieldId}>Number</label>
+          <label htmlFor={numberFieldId} className={css.label}>
+            Number
+          </label>
           <Field name="number">
             {({ field }) => (
               <MaskedInput

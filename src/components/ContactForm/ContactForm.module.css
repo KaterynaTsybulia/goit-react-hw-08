@@ -5,18 +5,10 @@
   display: flex;
   flex-direction: column;
   gap: 8px;
-  border: 2px solid #424242;
+  border: 1px solid #241c1382;
   border-radius: 10px;
-  background: rgb(191, 241, 152);
-  background: linear-gradient(
-    270deg,
-    rgba(191, 241, 152, 1) 0%,
-    rgba(168, 220, 142, 1) 25%,
-    rgba(191, 241, 152, 1) 50%,
-    rgba(168, 220, 142, 1) 75%,
-    rgba(191, 241, 152, 1) 100%
-  );
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  background-color: rgb(84 54 37 / 16%);
+  box-shadow: 0px 4px 4px #775c4c29;
 }
 
 .divContact {
@@ -26,27 +18,41 @@
   gap: 3px;
 }
 
+.label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: rgb(228 223 220);
+  text-align: center;
+}
+
 .input {
-  height: 25px;
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  background-color: rgb(207 192 183);
 }
 
 .formError {
   display: block;
-  max-width: 300px;
+  margin: 0 auto;
   color: rgb(143, 71, 71);
 }
 
 .buttonAdd {
-  padding: 11px 16px;
-  font-size: 16px;
-  background-color: #b798e8;
-  color: #0b0b0b;
+  width: 100%;
+  padding: 10px;
+  background-color: #8f6a47;
+  color: rgb(228 223 220);
   border: none;
-  border-radius: 5px;
+  border-radius: 4px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  font-size: 16px;
+  font-weight: bold;
 }
 
 .buttonAdd:hover {
-  background-color: #b3dfe5;
+  background-color: #3f1f08;
 }

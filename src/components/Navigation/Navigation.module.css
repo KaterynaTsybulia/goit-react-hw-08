@@ -7,13 +7,87 @@
 
 .link {
   text-decoration: none;
-  color: #59acdc;
-  margin-right: 15px;
-  font-size: 16px;
+  color: rgb(228 223 220);
+  margin-right: 20px;
+  font-size: 22px;
   transition: color 0.3s;
 }
 
 .active {
   font-weight: bold;
-  color: #0350a3;
+  color: #2b1d12;
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  flex-wrap: wrap;
+}
+
+.link {
+  text-decoration: none;
+  color: rgb(228, 223, 220);
+  margin-right: 20px;
+  font-size: 22px;
+  transition: color 0.3s;
+}
+
+.active {
+  font-weight: bold;
+  color: #2b1d12;
+}
+
+@media (min-width: 0px) and (max-width: 320px) {
+  .navigation {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 0;
+  }
+
+  .link {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 321px) and (max-width: 720px) {
+  .navigation {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .link {
+    margin-right: 0;
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 721px) and (max-width: 1024px) {
+  .navigation {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+  }
+
+  .link {
+    margin-right: 20px;
+    font-size: 22px;
+  }
+}
+
+@media (min-width: 1025px) {
+  .navigation {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .link {
+    margin-right: 20px;
+    font-size: 22px;
+  }
 }

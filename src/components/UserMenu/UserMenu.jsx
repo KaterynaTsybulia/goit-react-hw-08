@@ -17,7 +17,7 @@ export const UserMenu = () => {
     <div className={css.wrapper}>
       {isLoggedIn && (
         <>
-          <span className={css.span}>Hello, {userData.name} ! </span>
+          <span className={css.span}>Hello, {userData.name}! </span>
           <button className={css.button} onClick={handleLogout}>
             Logout
           </button>

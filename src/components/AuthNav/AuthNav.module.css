@@ -3,19 +3,71 @@
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
+  gap: 20px;
+  transition: all 0.3s ease;
 }
 
 .link {
   text-decoration: none;
-  color: #007bff;
-  margin-right: 15px;
-  font-size: 16px;
-  transition: color 0.3s;
+  color: rgb(228, 223, 220);
+  font-size: 22px;
+  font-weight: 500;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.link:hover {
+  color: #8f6a47;
+  transform: scale(1.05);
 }
 
 .active {
   font-weight: bold;
-  color: #0056b3;
+  color: #2b1d12;
 }
 
+@media (min-width: 0px) and (max-width: 320px) {
+  .navigation {
+    font-size: 10px;
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+    padding: 0;
+  }
 
+  .link {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 321px) and (max-width: 720px) {
+  .navigation {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .link {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 721px) and (max-width: 1024px) {
+  .navigation {
+    flex-direction: row;
+    gap: 25px;
+  }
+
+  .link {
+    font-size: 22px;
+  }
+}
+
+@media (min-width: 1025px) {
+  .navigation {
+    flex-direction: row;
+    gap: 30px;
+  }
+
+  .link {
+    font-size: 24px;
+  }
+}
