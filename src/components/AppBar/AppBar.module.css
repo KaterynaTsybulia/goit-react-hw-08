@@ -13,7 +13,8 @@
   .header {
     width: 300px;
     padding: 0;
-    flex-direction: column;
+    justify-content: space-around;
+    /* flex-direction: column; */
   }
 }
 

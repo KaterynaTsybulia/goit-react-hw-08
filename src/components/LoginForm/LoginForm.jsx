@@ -29,7 +29,7 @@ export const LoginForm = () => {
       onSubmit={handleSubmit}
     >
       <Form className={css.form}>
-      <label htmlFor={emailFieldId} className={css.label}>
+        <label htmlFor={emailFieldId} className={css.label}>
           E-mail
         </label>
         <Field
@@ -39,7 +39,7 @@ export const LoginForm = () => {
           placeholder="across@gmail.com"
           className={css.input}
         />
-        <ErrorMessage name="name" component="span" className={css.error} />
+        <ErrorMessage name="email" component="span" className={css.error} />
 
         <label htmlFor={passwordFieldId} className={css.label}>
           Password

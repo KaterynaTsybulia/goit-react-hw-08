@@ -32,13 +32,14 @@
   border: 1px solid #ccc;
   border-radius: 4px;
   box-sizing: border-box;
+  color: #1b1512;
   background-color: rgb(207 192 183);
 }
 
 .formError {
   display: block;
   margin: 0 auto;
-  color: rgb(143, 71, 71);
+  color: #ff2727;
 }
 
 .buttonAdd {
