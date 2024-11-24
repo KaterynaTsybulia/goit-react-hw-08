@@ -29,9 +29,13 @@ export default function ContactsPage() {
       <ContactForm />
       <SearchBox />
       {items.length === 0 && (
-        <p>There are no contacts in your phone book yet!</p>
+        <p className={css.text}>
+          There are no contacts in your phone book yet!
+        </p>
       )}
-      {loading && <Spinner /> && !error && <b>Request in progress...</b>}
+      {loading && <Spinner /> && !error && (
+        <p className={css.text}>Request in progress...</p>
+      )}
       {error ? (
         <p className={css.error}>An error occured: {error}</p>
       ) : (

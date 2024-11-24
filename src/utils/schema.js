@@ -1,14 +1,13 @@
 import * as Yup from "yup";
 
 
-export const validationContactSchema = Yup.object().shape({
-    name: Yup.string()
-      .min(3, "Too Short!")
-      .max(50, "Too Long!")
-      .required("Name is required"),
-    number: Yup.string()
-      .matches(/^\d{3}-\d{3}-\d{4}$/, "Enter in the format 123-456-7891")
-      .required("Phone number is required"),
+export const validationContactSchema = Yup.object({
+  name: Yup.string()
+    .min(2, "Name must be at least 2 characters long")
+    .max(50, "Name cannot exceed 50 characters")
+    .required("Name is required"),
+  number: Yup.string()
+    .required("Phone number is required"),
 });
   
 export const validationLofinSchema = Yup.object().shape({

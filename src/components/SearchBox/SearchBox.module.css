@@ -15,3 +15,47 @@
   color: #1b1512;
   background-color: rgb(207 192 183);
 }
+
+@media (max-width: 320px) {
+  .input {
+    width: 90%;
+    font-size: 14px;
+  }
+
+  .label {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 321px) and (max-width: 720px) {
+  .input {
+    width: 80%;
+    font-size: 16px;
+  }
+
+  .label {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 721px) and (max-width: 1024px) {
+  .input {
+    width: 60%;
+    font-size: 18px;
+  }
+
+  .label {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 1025px) {
+  .input {
+    width: 50%;
+    font-size: 20px;
+  }
+
+  .label {
+    font-size: 20px;
+  }
+}

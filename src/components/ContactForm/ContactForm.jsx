@@ -64,10 +64,11 @@ export default function ContactForm() {
                   "-",
                   /\d/,
                   /\d/,
+                  "-",
                   /\d/,
                   /\d/,
                 ]}
-                placeholder="123-123-1234"
+                placeholder="050-050-50-50"
                 id={numberFieldId}
                 type="text"
                 className={css.input}

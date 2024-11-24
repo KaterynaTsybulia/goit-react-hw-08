@@ -12,6 +12,9 @@
   text-align: center;
 }
 
+.text {
+  color: rgb(228 223 220);
+}
 .error {
   margin-top: 5px;
   margin-bottom: 5px;

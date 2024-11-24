@@ -13,3 +13,10 @@
 .buttonDelete:hover {
   background-color: #5b2c0f;
 }
+
+.buttonDelete:disabled {
+  background-color: #8f6a47;
+  color: rgb(228 223 220);
+  cursor: not-allowed;
+  opacity: 0.6;
+}

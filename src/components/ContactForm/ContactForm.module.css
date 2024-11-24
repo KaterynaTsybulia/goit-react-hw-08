@@ -5,10 +5,8 @@
   display: flex;
   flex-direction: column;
   gap: 8px;
-  border: 1px solid #241c1382;
   border-radius: 10px;
   background-color: rgb(84 54 37 / 16%);
-  box-shadow: 0px 4px 4px #775c4c29;
 }
 
 .divContact {
@@ -34,6 +32,7 @@
   box-sizing: border-box;
   color: #1b1512;
   background-color: rgb(207 192 183);
+  font-size: 14px;
 }
 
 .formError {
@@ -45,7 +44,7 @@
 .buttonAdd {
   width: 100%;
   padding: 10px;
-  background-color: #8f6a47;
+  background-color: #4a331e;
   color: rgb(228 223 220);
   border: none;
   border-radius: 4px;
