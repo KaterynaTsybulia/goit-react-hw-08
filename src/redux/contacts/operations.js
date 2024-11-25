@@ -36,3 +36,10 @@ export const deleteContact  = createAsyncThunk(
         }
     }
 );
+
+export const logOut = createAsyncThunk(
+    "contacts/logOut",
+    async () => {
+        return true;
+    }
+);
