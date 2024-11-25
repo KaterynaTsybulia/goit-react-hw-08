@@ -1,0 +1,152 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+
+.modal {
+  background-color: rgb(207 192 183);
+  border-radius: 10px;
+  padding: 20px;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.closeBtn {
+  background: none;
+  border: none;
+  font-size: 20px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.closeBtn:hover {
+  color: #ff4a4a;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.formDiv {
+  display: flex;
+  flex-direction: column;
+}
+
+.formDiv label {
+  font-size: 14px;
+  margin-bottom: 5px;
+  color: #555;
+}
+
+.formDiv input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.error {
+  font-size: 12px;
+  color: #ff4a4a;
+  margin-top: 5px;
+}
+
+.actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.cancelBtn,
+.submitBtn {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.cancelBtn {
+  background-color: rgb(207 192 183);
+  color: #333;
+  transition: background-color 0.3s ease;
+}
+
+.cancelBtn:hover {
+  background-color: #3f1f08;
+}
+
+.submitBtn {
+  background-color: #16561a;
+  color: #fff;
+  transition: background-color 0.3s ease;
+}
+
+.submitBtn:hover {
+  background-color: #10c218;
+}
+
+@media (max-width: 480px) {
+  .modal {
+    padding: 15px;
+  }
+
+  .formDiv input {
+    font-size: 14px;
+  }
+
+  .cancelBtn,
+  .submitBtn {
+    font-size: 14px;
+    padding: 8px 10px;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  .modal {
+    max-width: 350px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .modal {
+    max-width: 500px;
+  }
+
+  .formDiv input {
+    font-size: 18px;
+  }
+
+  .cancelBtn,
+  .submitBtn {
+    font-size: 18px;
+    padding: 12px 20px;
+  }
+}

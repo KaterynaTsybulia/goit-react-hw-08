@@ -8,6 +8,8 @@
 }
 
 .link {
+  display: flex;
+  align-items: center;
   text-decoration: none;
   color: rgb(228, 223, 220);
   font-size: 22px;
@@ -23,6 +25,11 @@
 .active {
   font-weight: bold;
   color: #2b1d12;
+  border-bottom: 2px double #2b1d12;
+}
+
+.icon {
+  padding-left: 4px;
 }
 
 @media (min-width: 0px) and (max-width: 320px) {

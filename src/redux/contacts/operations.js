@@ -37,6 +37,18 @@ export const deleteContact  = createAsyncThunk(
     }
 );
 
+export const editContact = createAsyncThunk(
+  "contacts/editContact",
+  async ({ contactId, updatedFields }, thunkAPI) => {
+    try {
+      const { data } = await authInstance.patch(`/contacts/${contactId}`, updatedFields);
+      return data;
+    } catch (error) {
+      return thunkAPI.rejectWithValue(error.message);
+    }
+  }
+);
+
 export const logOut = createAsyncThunk(
     "contacts/logOut",
     async () => {

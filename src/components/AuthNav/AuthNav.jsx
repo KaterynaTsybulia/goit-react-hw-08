@@ -1,4 +1,6 @@
 import { NavLink } from "react-router-dom";
+import { ImExit } from "react-icons/im";
+
 import css from "./AuthNav.module.css";
 
 import clsx from "clsx";
@@ -14,6 +16,7 @@ export const AuthNav = () => {
       </NavLink>
       <NavLink className={buildCssClasses} to="/login">
         Log In
+        <ImExit className={css.icon} />
       </NavLink>
     </div>
   );
