@@ -1,14 +1,14 @@
 .overlay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 100;
 }
 
 .modal {
@@ -19,6 +19,15 @@
   max-width: 400px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   animation: slideDown 0.3s ease-out;
+
+  text-align: center;
+  position: relative;
+}
+
+.modal h2 {
+  margin-bottom: 20px;
+  font-size: 28px;
+  color: #2b1d12;
 }
 
 @keyframes slideDown {
@@ -40,12 +49,12 @@
   top: 10px;
   right: 10px;
   cursor: pointer;
-  color: #333;
+  color: #2b1d12;
   transition: color 0.3s ease;
 }
 
 .closeBtn:hover {
-  color: #ff4a4a;
+  color: #8a3838;
 }
 
 .form {
@@ -59,17 +68,20 @@
   flex-direction: column;
 }
 
-.formDiv label {
-  font-size: 14px;
+.label {
+  display: flex;
+  flex-direction: column;
+  font-size: 18px;
   margin-bottom: 5px;
-  color: #555;
+  color: #2b1d12;
 }
 
-.formDiv input {
+.input {
   padding: 10px;
   border: 1px solid #ccc;
-  border-radius: 5px;
+  border-radius: 10px;
   font-size: 16px;
+  margin-top: 5px;
 }
 
 .error {
@@ -84,68 +96,50 @@
   gap: 10px;
 }
 
-.cancelBtn,
-.submitBtn {
+.saveBtn {
   padding: 10px 15px;
   border: none;
   border-radius: 5px;
   font-size: 16px;
   cursor: pointer;
-}
-
-.cancelBtn {
-  background-color: rgb(207 192 183);
-  color: #333;
-  transition: background-color 0.3s ease;
-}
-
-.cancelBtn:hover {
-  background-color: #3f1f08;
-}
-
-.submitBtn {
-  background-color: #16561a;
+  background-color: #316b35;
   color: #fff;
   transition: background-color 0.3s ease;
 }
 
-.submitBtn:hover {
-  background-color: #10c218;
+.saveBtn:hover {
+  background-color: #16561a;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 320px) {
   .modal {
     padding: 15px;
   }
 
-  .formDiv input {
-    font-size: 14px;
-  }
-
-  .cancelBtn,
-  .submitBtn {
+  .saveBtn {
     font-size: 14px;
     padding: 8px 10px;
   }
 }
 
-@media (min-width: 481px) and (max-width: 768px) {
+@media (min-width: 321px) and (max-width: 768px) {
   .modal {
     max-width: 350px;
   }
+  .input {
+    font-size: 14px;
+  }
 }
-
-@media (min-width: 1024px) {
+@media (min-width: 769px) {
   .modal {
     max-width: 500px;
   }
 
-  .formDiv input {
+  .input {
     font-size: 18px;
   }
 
-  .cancelBtn,
-  .submitBtn {
+  .saveBtn {
     font-size: 18px;
     padding: 12px 20px;
   }

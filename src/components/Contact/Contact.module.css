@@ -5,7 +5,8 @@
   margin-left: 5px;
 }
 
-.buttonDelete {
+.btnDelete,
+.btnEdit {
   padding: 10px;
   background-color: #8f6a47;
   color: rgb(228 223 220);
@@ -17,11 +18,15 @@
   transition: background-color 0.3s ease;
 }
 
-.buttonDelete:hover {
+.btnEdit {
+}
+
+.btnDelete:hover,
+.btnEdit:hover {
   background-color: #5b2c0f;
 }
 
-.buttonDelete:disabled {
+.btnDelete:disabled {
   background-color: #8f6a47;
   color: rgb(228 223 220);
   cursor: not-allowed;
@@ -39,7 +44,7 @@
     gap: 8px;
   }
 
-  .buttonDelete {
+  .btnDelete {
     padding: 10px;
     font-size: 16px;
   }
@@ -50,7 +55,7 @@
     justify-content: space-between;
   }
 
-  .buttonDelete {
+  .btnDelete {
     padding: 6px 10px;
     font-size: 15px;
   }
@@ -62,7 +67,7 @@
     justify-content: flex-start;
   }
 
-  .buttonDelete {
+  .btnDelete {
     padding: 8px 12px;
     font-size: 16px;
   }
@@ -74,7 +79,7 @@
     justify-content: flex-start;
   }
 
-  .buttonDelete {
+  .btnDelete {
     padding: 10px 14px;
     font-size: 16px;
   }

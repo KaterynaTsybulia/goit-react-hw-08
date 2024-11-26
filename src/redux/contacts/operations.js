@@ -37,21 +37,19 @@ export const deleteContact  = createAsyncThunk(
     }
 );
 
-export const editContact = createAsyncThunk(
-  "contacts/editContact",
-  async ({ contactId, updatedFields }, thunkAPI) => {
+export const updateContact = createAsyncThunk(
+    "contacts/updateContact",
+    async ({ id, name, number }, thunkAPI) => {
     try {
-      const { data } = await authInstance.patch(`/contacts/${contactId}`, updatedFields);
-      return data;
+        const { data } = await authInstance.patch(`/contacts/${id}`, {
+        name,
+        number,
+        });
+        return data;
     } catch (error) {
-      return thunkAPI.rejectWithValue(error.message);
+        return thunkAPI.rejectWithValue(error.message);
     }
-  }
+    }
 );
 
-// export const logOut = createAsyncThunk(
-//     "contacts/logOut",
-//     async () => {
-//         return true;
-//     }
-// );
+

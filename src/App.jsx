@@ -20,6 +20,7 @@ const LoginPage = lazy(() => import("./pages/LoginPage/LoginPage"));
 const ContactsPage = lazy(() => import("./pages/ContactsPage/ContactsPage"));
 
 import "./App.css";
+import Modal from "./components/Modal/Modal";
 
 export default function App() {
   const dispatch = useDispatch();
@@ -36,6 +37,7 @@ export default function App() {
   return (
     <>
       <Toaster position="top-right" reverseOrder={false} />
+      <Modal />
       <Suspense fallback={<Spinner />}>
         <Routes>
           <Route path="/" element={<Layout />}>

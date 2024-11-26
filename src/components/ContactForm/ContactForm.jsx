@@ -1,7 +1,8 @@
-import { ErrorMessage, Field, Form, Formik } from "formik";
-import MaskedInput from "react-text-mask";
 import { useDispatch } from "react-redux";
 import { useId } from "react";
+
+import { ErrorMessage, Field, Form, Formik } from "formik";
+import MaskedInput from "react-text-mask";
 
 import { addContact } from "../../redux/contacts/operations";
 import { validationContactSchema } from "../../utils/schema";
