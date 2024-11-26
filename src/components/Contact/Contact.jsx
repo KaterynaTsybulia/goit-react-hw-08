@@ -7,6 +7,7 @@ import { MdEdit } from "react-icons/md";
 import { deleteContact } from "../../redux/contacts/operations";
 import Modal from "../Modal/Modal";
 import { selectIsModalOpen } from "../../redux/contacts/selectors";
+import { Spinner } from "../Spinner/Spinner";
 
 import css from "./Contact.module.css";
 import { openModal } from "../../redux/contacts/slice";
@@ -56,7 +57,8 @@ export default function Contact({ contact: { id, name, number } }) {
           disabled={isDeleting}
           className={css.buttonDelete}
         >
-          {isDeleting ? "Deleting..." : "Delete"}
+          {isDeleting ? <Spinner /> : "Delete"}
+          {/* {isDeleting ? "Deleting..." : "Delete"} */}
         </button>
         {isModalOpen && <Modal />}
       </div>
