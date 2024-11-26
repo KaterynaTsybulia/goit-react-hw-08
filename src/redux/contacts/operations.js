@@ -49,9 +49,9 @@ export const editContact = createAsyncThunk(
   }
 );
 
-export const logOut = createAsyncThunk(
-    "contacts/logOut",
-    async () => {
-        return true;
-    }
-);
+// export const logOut = createAsyncThunk(
+//     "contacts/logOut",
+//     async () => {
+//         return true;
+//     }
+// );

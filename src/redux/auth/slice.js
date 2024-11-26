@@ -14,9 +14,8 @@ function handleRejected (state, action) {
 
 const INITIAL_STATE = {
     user: { name: null, email: null },
-    loading: false,
+    // loading: false,
     error: null,
-    
     token: null,
     isLoggedIn: false,
     isRefreshing: false,
@@ -31,13 +30,13 @@ const authSlice = createSlice({
             .addCase(register.fulfilled, (state, action) => {
                 state.user = action.payload.user;
                 state.token = action.payload.token;
-                state.loading = false;
+                // state.loading = false;
                 state.isLoggedIn = true;
             })
             .addCase(register.rejected, handleRejected)
             .addCase(loginUser.pending, handlePending)
             .addCase(loginUser.fulfilled, (state, action) => {
-                state.loading = false;
+                // state.loading = false;
                 state.isLoggedIn = true;
                 state.user = action.payload.user;
                 state.token = action.payload.token;
@@ -56,11 +55,11 @@ const authSlice = createSlice({
                 state.isRefreshing = false;
                 state.error = action.payload;
             })
-            .addCase(logoutUser.pending, handlePending)
-            .addCase(logoutUser.fulfilled, () => {
-                return INITIAL_STATE;
+            .addCase(logoutUser.fulfilled, (state) => {
+                state.user = { name: null, email: null };
+                state.token = null;
+                state.isLoggedIn = false;
             })
-            .addCase(logoutUser.rejected, handleRejected)
     }
 })    
     

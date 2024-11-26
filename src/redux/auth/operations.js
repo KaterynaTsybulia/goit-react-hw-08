@@ -19,7 +19,7 @@ export const register = createAsyncThunk(
     'auth/registerUser',
     async (newUser, thunkAPI) => {
         try {
-      const {data} = await authInstance.post("/users/signup", newUser);
+            const {data} = await authInstance.post("/users/signup", newUser);
             setToken(data.token);
             return data;
         } catch (error) {
